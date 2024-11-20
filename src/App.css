@@ -1,0 +1,218 @@
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;  /* Fondo oscuro para el tema futurista */
+  color: #e0e0e0;  /* Color de texto más claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #00e5ff;  /* Azul neón */
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  margin: 20px 10px;
+  font-weight: 500;
+}
+
+/* Aplicación principal */
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #333333; /* Fondo oscuro para el contenedor */
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.App:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Formularios */
+form, .auth-section, .add-product {
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #00e5ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #444;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #00e5ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+button {
+  background-color: #00e5ff;  /* Azul neón */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 90%;
+  max-width: 400px;
+}
+
+button:hover {
+  background-color: #00bcd4;  /* Azul ligeramente más oscuro */
+  transform: scale(1.05);
+}
+
+button.secondary {
+  background-color: #6c757d;
+}
+
+button.secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Mensajes de error */
+p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.producto {
+  background-color: #222222;  /* Fondo oscuro */
+  border: 1px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(33% - 20px);
+  max-width: calc(33% - 20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.3);
+}
+
+.producto h3 {
+  font-size: 1.5rem;
+  color: #00e5ff;  /* Título con azul neón */
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 1rem;
+  color: #e0e0e0;  /* Color de texto suave */
+  margin: 5px 0;
+}
+
+.producto .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00e5ff;  /* Precio con azul neón */
+  margin-top: 10px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .producto {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .App {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .producto {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  input, button {
+    width: 100%;
+  }
+}
+
+/* Estilos adicionales */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.logout-button button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button button:hover {
+  background-color: #c82333;
+}
+
+.auth-section {
+  text-align: center;
+}
+
+/* Animación y transiciones */
+button:active {
+  transform: scale(0.98);
+}
+
+input:focus, button:hover {
+  outline: none;
+}

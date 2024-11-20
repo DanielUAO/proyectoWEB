@@ -1,0 +1,66 @@
+/* Estilo CSS */
+.App {
+  position: relative; /* Esto permite que los elementos dentro del App usen 'position: absolute' */
+  padding: 20px;
+}
+
+.logout-button {
+  position: fixed; /* Fija el botón en la parte superior de la pantalla */
+  top: 20px; /* Ajusta la distancia desde la parte superior */
+  right: 20px; /* Ajusta la distancia desde el borde derecho */
+}
+
+.logout-button button {
+  background-color: #f44336; /* Rojo para el botón */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.logout-button button:hover {
+  background-color: #d32f2f; /* Rojo oscuro cuando el cursor pasa por encima */
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 300px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 250px;
+}
+
+.producto h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.producto p {
+  margin: 5px 0;
+}
