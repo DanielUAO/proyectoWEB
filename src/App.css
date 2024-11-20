@@ -1,218 +1,294 @@
-/* Estilos generales */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #1c1c1c;  /* Fondo oscuro para el tema futurista */
-  color: #e0e0e0;  /* Color de texto más claro */
+/* Estilos para la aplicación */
+.App {
+  font-family: 'Arial', sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a); /* Gradiente de fondo oscuro */
+  min-height: 100vh;
+  color: #e0e0e0;
 }
 
 h1 {
-  text-align: center;
-  font-size: 3rem;
-  color: #00e5ff;  /* Azul neón */
-  margin: 20px 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  color: #00e5ff; /* Azul brillante */
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 15px rgba(0, 229, 255, 0.8); /* Efecto futurista de resplandor */
 }
 
 h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #e0e0e0;
-  margin: 20px 10px;
-  font-weight: 500;
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-/* Aplicación principal */
-.App {
-  max-width: 800px;
-  margin: 0 auto;
+.auth-section {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
   padding: 20px;
-  background: #333333; /* Fondo oscuro para el contenedor */
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 229, 255, 0.3); /* Sombra azul futurista */
+  max-width: 400px;
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.App:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Formularios */
-form, .auth-section, .add-product {
-  margin: 20px auto;
   text-align: center;
+}
+
+.auth-section input {
   width: 100%;
-}
-
-input {
-  width: 90%;
-  max-width: 400px;
-  padding: 12px 15px;
+  padding: 12px;
   margin: 10px 0;
-  border: 1px solid #00e5ff;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  background-color: #444;
+  border: 2px solid #00e5ff; /* Borde azul brillante */
+  border-radius: 5px;
+  background-color: #333333;
   color: #e0e0e0;
-  transition: all 0.3s ease;
+  font-size: 16px;
 }
 
-input:focus {
-  border-color: #00e5ff;
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-}
-
-button {
-  background-color: #00e5ff;  /* Azul neón */
-  color: #fff;
+.auth-section button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00e5ff; /* Azul brillante */
+  color: white;
   border: none;
-  padding: 12px 20px;
-  margin-top: 15px;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 90%;
-  max-width: 400px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #00bcd4;  /* Azul ligeramente más oscuro */
-  transform: scale(1.05);
+.auth-section button:hover {
+  background-color: #00b8d4; /* Azul más oscuro */
+  transform: scale(1.05); /* Efecto de escalado */
 }
 
-button.secondary {
-  background-color: #6c757d;
+.auth-section button:active {
+  background-color: #00b8d4;
+  transform: scale(0.98); /* Efecto de compresión */
 }
 
-button.secondary:hover {
-  background-color: #5a6268;
+.auth-section button:last-child {
+  background-color: #00b8d4; /* Color para el botón de cambiar entre registro e inicio de sesión */
 }
 
-/* Mensajes de error */
-p {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #dc3545;
-  font-weight: 500;
+.auth-section button:last-child:hover {
+  background-color: #f50057;
 }
 
-/* Productos */
+.auth-section button:last-child:active {
+  background-color: #c51162;
+}
+
+.auth-section p {
+  color: red;
+  font-size: 14px;
+}
+
+.store-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 40px;
+}
+
 .productos {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .producto {
-  background-color: #222222;  /* Fondo oscuro */
-  border: 1px solid #444;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
   padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 229, 255, 0.3); /* Sombra azul */
+  width: 250px;
   text-align: center;
-  flex: 1 1 calc(33% - 20px);
-  max-width: calc(33% - 20px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.2s ease;
 }
 
 .producto:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 229, 255, 0.3);
+  background-color: rgba(0, 229, 255, 0.1); /* Fondo azul suave */
+  transform: translateY(-5px); /* Efecto de elevación */
 }
 
 .producto h3 {
-  font-size: 1.5rem;
-  color: #00e5ff;  /* Título con azul neón */
-  margin-bottom: 10px;
+  color: #00e5ff; /* Título en azul brillante */
+  font-size: 20px;
 }
 
 .producto p {
-  font-size: 1rem;
-  color: #e0e0e0;  /* Color de texto suave */
-  margin: 5px 0;
+  color: #e0e0e0;
+  font-size: 16px;
 }
 
 .producto .precio {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #00e5ff;  /* Precio con azul neón */
-  margin-top: 10px;
+  color: #00e5ff; /* Precio en azul brillante */
+  font-size: 18px;
 }
 
-/* Diseño responsivo */
-@media (max-width: 768px) {
-  .producto {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-
-  .App {
-    padding: 15px;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .producto {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  input, button {
-    width: 100%;
-  }
-}
-
-/* Estilos adicionales */
-.logout-button {
-  position: absolute;
-  top: 20px;
+.add-product-button {
+  position: fixed;
+  bottom: 20px;
   right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #00e5ff; /* Azul brillante */
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 229, 255, 0.3); /* Sombra azul */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-product-button:hover {
+  background-color: #00b8d4; /* Azul más oscuro */
+  transform: scale(1.1);
+}
+
+.add-product-button:active {
+  background-color: #00b8d4;
+  transform: scale(0.95);
+}
+
+.add-product-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro translúcido */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3); /* Sombra azul futurista */
+  width: 400px;
+  z-index: 1000;
+  color: #e0e0e0;
+}
+
+.add-product-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #00e5ff; /* Borde azul brillante */
+  border-radius: 5px;
+  background-color: #333333;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.add-product-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00e5ff; /* Azul brillante */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-product-form button:hover {
+  background-color: #00b8d4; /* Azul más oscuro */
+}
+
+.add-product-form button:active {
+  background-color: #00b8d4;
+}
+
+.close-add-product {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4081; /* Color para cerrar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-add-product:hover {
+  background-color: #f50057;
+}
+
+.close-add-product:active {
+  background-color: #c51162;
 }
 
 .logout-button button {
-  background-color: #dc3545;
+  width: 200px;
+  padding: 12px;
+  background-color: #ff4081; /* Color futurista para logout */
   color: white;
   border: none;
-  padding: 10px 15px;
-  font-size: 14px;
-  cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .logout-button button:hover {
-  background-color: #c82333;
+  background-color: #f50057;
 }
 
-.auth-section {
+.logout-button button:active {
+  background-color: #c51162;
+}
+
+/* Estilo para la ventana emergente de compra */
+.purchase-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro translúcido */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3); /* Sombra azul futurista */
+  width: 300px;
+  z-index: 1000;
+  color: #e0e0e0;
+}
+
+.purchase-window input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #00e5ff; /* Borde azul brillante */
+  border-radius: 5px;
+  background-color: #333333;
+  color: #e0e0e0;
+}
+
+.purchase-window button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00e5ff; /* Azul brillante */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-window button:hover {
+  background-color: #00b8d4;
+}
+
+.purchase-window button:active {
+  background-color: #00b8d4;
+}
+
+.purchase-window p {
   text-align: center;
-}
-
-/* Animación y transiciones */
-button:active {
-  transform: scale(0.98);
-}
-
-input:focus, button:hover {
-  outline: none;
+  color: #00e5ff; /* Mensaje de agradecimiento azul brillante */
 }
